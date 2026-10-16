@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SmartPOS is a portfolio-ready point-of-sale and inventory management dashboard for small businesses.">
+  <meta name="theme-color" content="#0f172a">
+  <title>SmartPOS — Sales & Inventory Management</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-block">
+        <div class="brand-mark" aria-hidden="true">S</div>
+        <div>
+          <div class="brand-name">SmartPOS</div>
+          <div class="brand-sub" id="sidebarBusiness">Northstar Mini Mart</div>
+        </div>
+      </div>
+
+      <nav class="side-nav" id="nav" aria-label="Primary navigation">
+        <button class="nav-item active" data-view="dashboard"><span>▦</span><span>Dashboard</span></button>
+        <button class="nav-item" data-view="pos"><span>◫</span><span>Point of Sale</span></button>
+        <div class="nav-label">Operations</div>
+        <button class="nav-item" data-view="products"><span>□</span><span>Products</span></button>
+        <button class="nav-item" data-view="inventory"><span>↕</span><span>Inventory</span></button>
+        <button class="nav-item" data-view="transactions"><span>≡</span><span>Transactions</span></button>
+        <button class="nav-item" data-view="customers"><span>◎</span><span>Customers</span></button>
+        <button class="nav-item" data-view="suppliers"><span>◇</span><span>Suppliers</span></button>
+        <div class="nav-label admin-only">Insights</div>
+        <button class="nav-item admin-only" data-view="reports"><span>⌁</span><span>Reports</span></button>
+        <button class="nav-item admin-only" data-view="settings"><span>⚙</span><span>Settings</span></button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="demo-badge">Portfolio Demo</div>
+        <small>Data is stored in your browser.</small>
+      </div>
+    </aside>
+
+    <main class="main-shell">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="mobile-menu" id="mobileMenu" aria-label="Toggle navigation">☰</button>
+          <div>
+            <h1 id="viewTitle">Dashboard</h1>
+            <p id="viewSubtitle">Business overview and daily performance.</p>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <div class="date-chip" id="dateChip"></div>
+          <select class="role-select" id="roleSelect" aria-label="Demo role">
+            <option value="Admin">Admin Demo</option>
+            <option value="Cashier">Cashier Demo</option>
+          </select>
+          <div class="user-chip">
+            <div class="avatar" id="avatar">AD</div>
+            <div class="user-copy">
+              <strong id="userName">Alex Dela Cruz</strong>
+              <span id="userRole">Administrator</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section id="mainArea" class="content-area" aria-live="polite"></section>
+    </main>
+  </div>
+
+  <div id="modalRoot"></div>
+  <div id="toast" class="toast" role="status"></div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
